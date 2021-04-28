@@ -8,6 +8,10 @@ The Terraform script will launch the following services in AWS, to serve a web p
 
 The default setting uses t2.micro EC2 instance type which is covered by AWS free tier. Running it won't cost you extra money but remember to always destroy it.
 
+Tested on: 
+- Ubuntu: Terraform v0.12.18 + provider.aws v3.37.0
+- Mac   : Terraform v0.14.10 + provider registry.terraform.io/hashicorp/aws v3.37.0
+
 
 ## USAGE
 
@@ -21,9 +25,9 @@ $ terraform plan
 $ terraform apply
 ```
 
-After execution completed you'll see the result summary as shown below. Copy the ELB_DNS_Name value to a browser to verify the "Hello World" website run successfully.
+After execution completed you'll see the result summary as shown below. Copy the ELB_DNS_Name value to a browser to verify the "Hello World" website run successfully. (Sometimes you need to wait for another ~30 seconds for all AWS resources to be fully initialized.)
 ```
-Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
 
 Outputs:
 
